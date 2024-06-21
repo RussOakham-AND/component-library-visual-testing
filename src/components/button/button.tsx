@@ -1,6 +1,6 @@
-import { type ComponentPropsWithRef } from 'react';
 import { cva, type VariantProps } from 'class-variance-authority';
 import { clsxMerge } from '@/common/utils/classNameUtils';
+import { Button as AriaButton } from 'react-aria-components';
 
 /**
  * Button styles for the Button component.>
@@ -11,9 +11,9 @@ export const buttonStyles = cva(
     variants: {
       buttonType: {
         primary:
-          'bg-violet-500 text-white border-violet-500 hover:bg-violet-600',
+          'bg-green-500 text-white border border-green-500 hover:bg-green-hover',
         secondary:
-          'bg-gray-200 text-gray-600 border-gray-200 hover:bg-gray-300',
+          'bg-transparent text-green-500 border border-green-500 hover:border-green-hover hover:opacity-100',
         warning:
           'bg-yellow-500 text-white border-yellow-500 hover:bg-yellow-600',
         outline:
@@ -22,20 +22,15 @@ export const buttonStyles = cva(
         error: 'bg-red-500 text-white border-red-500 hover:bg-red-600',
       },
       size: {
-        default: ['text-base'],
-        small: ['text-sm'],
-        large: ['text-lg'],
-        xxl: ['text-2xl'],
-      },
-      spacing: {
-        default: ['py-2', 'px-4'],
-        small: ['py-1', 'px-2'],
-        large: ['py-3', 'px-6'],
-        xxl: ['py-4', 'px-8'],
+        default: ['text-base py-2 px-4'],
+        small: ['text-sm py-1 px-2'],
+        large: ['text-lg py-3 px-6'],
+        xxl: ['text-2xl py-4 px-8'],
       },
       rounded: {
-        default: 'rounded-md',
+        default: '',
         sm: 'rounded-sm',
+        md: 'rounded-md',
         lg: 'rounded-lg',
         xl: 'rounded-xl',
         xxl: 'rounded-2xl',
@@ -47,7 +42,6 @@ export const buttonStyles = cva(
       {
         buttonType: 'primary',
         size: 'default',
-        spacing: 'default',
         rounded: 'default',
       },
     ],
@@ -55,12 +49,11 @@ export const buttonStyles = cva(
       buttonType: 'primary',
       size: 'default',
       rounded: 'default',
-      spacing: 'default',
     },
   }
 );
 
-type ButtonElementProps = ComponentPropsWithRef<'button'>;
+type ButtonElementProps = React.ComponentProps<typeof AriaButton>;
 
 export interface ButtonProps
   extends ButtonElementProps,
@@ -77,14 +70,13 @@ export default function Button({
   rounded,
   label,
   rightIcon,
-  spacing,
   leftIcon,
   ...props
 }: ButtonProps) {
   return (
-    <button
+    <AriaButton
       className={clsxMerge(
-        buttonStyles({ buttonType, size, rounded, spacing }),
+        buttonStyles({ buttonType, size, rounded }),
         className
       )}
       type="button"
@@ -93,6 +85,6 @@ export default function Button({
       {Boolean(leftIcon) && leftIcon}
       {Boolean(label) && label}
       {Boolean(rightIcon) && rightIcon}
-    </button>
+    </AriaButton>
   );
 }

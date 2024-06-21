@@ -34,15 +34,6 @@ export const Secondary: Story = {
   },
 };
 
-export const Warning: Story = {
-  args: {
-    label: 'Button',
-    buttonType: 'warning',
-    onClick: () => {
-      window.console.log('Warning Button clicked!');
-    },
-  },
-};
 
 export const Outline: Story = {
   args: {
@@ -54,39 +45,3 @@ export const Outline: Story = {
   },
 };
 
-export const Disabled: Story = {
-  args: {
-    label: 'Button',
-    buttonType: 'disabled',
-    onClick: () => {
-      window.console.log('Disabled Button clicked!');
-    },
-  },
-};
-
-export const Error: Story = {
-  args: {
-    label: 'Button',
-    buttonType: 'error',
-    onClick: () => {
-      window.console.log('Error Button clicked!');
-    },
-  },
-};
-
-export const Large: Story = {
-  args: {
-    label: 'Button',
-    size: 'large',
-  },
-};
-
-export const Small: Story = {
-  args: {
-    size: 'small',
-    label: 'Button',
-    onClick: () => {
-      window.console.log('Button clicked!');
-    },
-  },
-};
