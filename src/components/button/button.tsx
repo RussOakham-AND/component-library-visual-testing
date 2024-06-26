@@ -16,7 +16,7 @@ const buttonStyles = cva(
           'bg-transparent text-green-500 border border-green-500 hover:bg-green-100 hover:opacity-100',
         warning:
           'bg-yellow-500 text-white border-yellow-500 hover:bg-yellow-600',
-        link: 'text-primary underline-offset-4 hover:underline',
+        link: 'text-black underline-offset-4 hover:underline',
         outline:
           'bg-white text-gray-600 hover:bg-gray-100 border hover:border-gray-100 border-gray-300 hover:shadow-md',
         disabled: 'bg-black text-white border-black cursor-not-allowed',

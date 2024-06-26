@@ -4,10 +4,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        green: {
-          default: '#013220',
-          500: '#013220',
-        },
+        primary: '#FF0000',
       },
     },
   },

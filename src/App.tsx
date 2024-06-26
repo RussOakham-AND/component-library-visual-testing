@@ -3,7 +3,7 @@ import { Button, buttonStyles } from '@/components/button/button';
 import { ArrowLeft } from 'lucide-react';
 import { BrowserRouter, Link } from 'react-router-dom';
 
-const brandId = import.meta.env.VITE_BRAND_ID
+const brandId = import.meta.env.VITE_BRAND_ID;
 
 function App() {
   console.log(`Building for brand ID: ${brandId}`);
@@ -66,6 +66,9 @@ function App() {
             <ArrowLeft size={10} />
             Link
           </Link>
+          <div className="h-16 w-16 bg-primary m-10 p-1 text-center">
+            Primary Color
+          </div>
         </div>
       </div>
     </BrowserRouter>
