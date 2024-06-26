@@ -33,6 +33,6 @@
   "include": [
     "src",
     "**/*.ts",
-    "**/*.tsx",
+    "**/*.tsx", "tailwind.config.js",
   ]
 }

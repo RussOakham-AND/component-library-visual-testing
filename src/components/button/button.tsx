@@ -11,7 +11,7 @@ const buttonStyles = cva(
     variants: {
       buttonType: {
         primary:
-          'bg-green-500 text-white border border-green-500 hover:bg-green-hover',
+          'bg-green-500 text-white border border-green-500 hover:bg-green-100',
         secondary:
           'bg-transparent text-green-500 border border-green-500 hover:bg-green-100 hover:opacity-100',
         warning:
@@ -29,9 +29,9 @@ const buttonStyles = cva(
         xxl: ['text-2xl py-4 px-8'],
       },
       theme: {
-        1: 'bg-red-500 text-white border border-red-500 hover:bg-red-hover',
+        1: 'bg-red-500 text-white border border-red-500 hover:bg-red-100',
         2: 'bg-purple-500 rounded-md text-black border border-purple-500 hover:bg-violet-600',
-        3: 'bg-blue-500 rounded-lg text-white border border-blue-500 hover:bg-blue-hover',
+        3: 'bg-blue-500 rounded-lg text-white border border-blue-500 hover:bg-blue-100',
       },
       rounded: {
         default: '',
