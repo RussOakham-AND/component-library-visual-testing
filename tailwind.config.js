@@ -34,3 +34,5 @@ export default {
   },
   plugins: ['@tailwindcss/forms'],
 };
+
+// https://medium.com/koodoo/how-do-we-approach-theming-for-white-label-applications-672163019731
