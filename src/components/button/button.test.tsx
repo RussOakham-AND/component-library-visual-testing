@@ -6,57 +6,15 @@ describe('Button', () => {
   it('renders correctly', () => {
     const { container } = render(<Button>Click Me</Button>);
 
-    expect(container.firstChild).toHaveClass('bg-violet-500');
+    expect(container.firstChild).toHaveClass('bg-green-500');
     expect(container.firstChild).toHaveClass('text-white');
-    expect(container.firstChild).toHaveClass('rounded-md');
     expect(container.firstChild).toHaveClass('px-4');
-  });
-
-  it('renders correctly with left icon', () => {
-    const { container } = render(
-      <Button leftIcon={<span>👈</span>}>Click Me</Button>
-    );
-
-    expect(container).toMatchSnapshot();
-    expect(container).toHaveTextContent('👈');
-  });
-
-  it('renders correctly with right icon', () => {
-    const { container } = render(
-      <Button rightIcon={<span>👉</span>}>Click Me</Button>
-    );
-
-    expect(container).toMatchSnapshot();
-    expect(container).toHaveTextContent('👉');
-  });
-
-  it('renders correctly with both icons', () => {
-    const { container } = render(
-      <Button leftIcon={<span>👈</span>} rightIcon={<span>👉</span>} />
-    );
-
-    expect(container).toHaveTextContent('👈');
-    expect(container).toHaveTextContent('👉');
   });
 
   it('renders correctly with label', () => {
     const { container } = render(<Button label="Click Me" />);
 
     expect(container).toHaveTextContent('Click Me');
-  });
-
-  it('renders correctly with label and left icon', () => {
-    const { container } = render(
-      <Button
-        label="Click Me"
-        leftIcon={<span>👈</span>}
-        rightIcon={<span>👉</span>}
-      />
-    );
-
-    expect(container).toHaveTextContent('Click Me');
-    expect(container).toHaveTextContent('👈');
-    expect(container).toHaveTextContent('👉');
   });
 
   it('render correctly with size prop', () => {
@@ -104,7 +62,6 @@ describe('Button', () => {
     expect(containerNone.firstChild).toHaveClass('rounded-none');
     expect(containerXL.firstChild).toHaveClass('rounded-xl');
     expect(containerXXL.firstChild).toHaveClass('rounded-2xl');
-    expect(containerDefault.firstChild).toHaveClass('rounded-md');
     expect(containerSM.firstChild).toHaveClass('rounded-sm');
   });
 
@@ -137,10 +94,10 @@ describe('Button', () => {
     expect(containerError).toMatchSnapshot();
 
     expect(containerPrimary.firstChild).toHaveClass(
-      'bg-violet-500 text-white border-violet-500 hover:bg-violet-600'
+      'flex flex-row gap-x-4 disabled:cursor-not-allowed items-center justify-center bg-green-500 text-white border border-green-500 hover:bg-green-hover text-base py-2 px-4'
     );
     expect(container.firstChild).toHaveClass(
-      'bg-gray-200 text-gray-600 border-gray-200 hover:bg-gray-300'
+      'flex flex-row gap-x-4 disabled:cursor-not-allowed items-center justify-center bg-transparent text-green-500 border border-green-500 hover:border-green-hover hover:opacity-100 text-base py-2 px-4'
     );
     expect(containerOutline.firstChild).toHaveClass(
       'bg-white text-gray-600 hover:bg-gray-100 border hover:border-gray-100 border-gray-300 hover:shadow-md'

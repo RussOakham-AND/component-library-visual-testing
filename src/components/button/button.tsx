@@ -58,8 +58,6 @@ type ButtonElementProps = React.ComponentProps<typeof AriaButton>;
 export interface ButtonProps
   extends ButtonElementProps,
     VariantProps<typeof buttonStyles> {
-  leftIcon?: React.ReactNode;
-  rightIcon?: React.ReactNode;
   label?: string;
 }
 
@@ -69,8 +67,6 @@ export default function Button({
   size,
   rounded,
   label,
-  rightIcon,
-  leftIcon,
   ...props
 }: ButtonProps) {
   return (
@@ -82,9 +78,7 @@ export default function Button({
       type="button"
       {...props}
     >
-      {Boolean(leftIcon) && leftIcon}
       {Boolean(label) && label}
-      {Boolean(rightIcon) && rightIcon}
     </AriaButton>
   );
 }
