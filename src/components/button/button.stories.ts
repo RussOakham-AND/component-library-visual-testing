@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import Button from './button';
+import { Button } from './button';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 const meta = {
@@ -16,9 +16,10 @@ type Story = StoryObj<typeof meta>;
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const Primary: Story = {
   args: {
-    label: 'Button',
+    children: 'Button',
     buttonType: 'primary',
-    onClick: () => {
+    theme: 1,
+    onPress: () => {
       window.console.log('Primary Button clicked!');
     },
   },
@@ -26,9 +27,10 @@ export const Primary: Story = {
 
 export const Secondary: Story = {
   args: {
-    label: 'Button',
+    children: 'Button',
     buttonType: 'secondary',
-    onClick: () => {
+    theme: 1,
+    onPress: () => {
       window.console.log('Secondary Button clicked!');
     },
   },
@@ -37,9 +39,10 @@ export const Secondary: Story = {
 
 export const Outline: Story = {
   args: {
-    label: 'Button',
+    children: 'Button',
     buttonType: 'outline',
-    onClick: () => {
+    theme: 1,
+    onPress: () => {
       window.console.log('Outline Button clicked!');
     },
   },
