@@ -18,7 +18,6 @@ export const Primary: Story = {
   args: {
     children: 'Button',
     buttonType: 'primary',
-    theme: 1,
     onPress: () => {
       window.console.log('Primary Button clicked!');
     },
@@ -29,7 +28,6 @@ export const Secondary: Story = {
   args: {
     children: 'Button',
     buttonType: 'secondary',
-    theme: 1,
     onPress: () => {
       window.console.log('Secondary Button clicked!');
     },
@@ -41,7 +39,17 @@ export const Outline: Story = {
   args: {
     children: 'Button',
     buttonType: 'outline',
-    theme: 1,
+    onPress: () => {
+      window.console.log('Outline Button clicked!');
+    },
+  },
+};
+
+export const ThemeOverride: Story = {
+  args: {
+    children: 'Button',
+    buttonType: 'primary',
+    theme: 2,
     onPress: () => {
       window.console.log('Outline Button clicked!');
     },

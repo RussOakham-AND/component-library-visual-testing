@@ -12,7 +12,7 @@ describe('Button', () => {
   });
 
   it('renders correctly with label', () => {
-    const { container } = render(<Button label="Click Me" />);
+    const { container } = render(<Button>Click Me</Button>);
 
     expect(container).toHaveTextContent('Click Me');
   });
@@ -97,7 +97,7 @@ describe('Button', () => {
       'flex flex-row gap-x-4 disabled:cursor-not-allowed items-center justify-center bg-green-500 text-white border border-green-500 hover:bg-green-hover text-base py-2 px-4'
     );
     expect(container.firstChild).toHaveClass(
-      'flex flex-row gap-x-4 disabled:cursor-not-allowed items-center justify-center bg-transparent text-green-500 border border-green-500 hover:border-green-hover hover:opacity-100 text-base py-2 px-4'
+      'flex flex-row gap-x-4 disabled:cursor-not-allowed items-center justify-center bg-transparent text-green-500 border border-green-500 hover:bg-green-100 hover:opacity-100 text-base py-2 px-4'
     );
     expect(containerOutline.firstChild).toHaveClass(
       'bg-white text-gray-600 hover:bg-gray-100 border hover:border-gray-100 border-gray-300 hover:shadow-md'

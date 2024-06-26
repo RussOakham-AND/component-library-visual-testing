@@ -3,7 +3,7 @@
 exports[`Button > render correctly with buttonType prop 1`] = `
 <div>
   <button
-    class="flex flex-row gap-x-4 disabled:cursor-not-allowed items-center justify-center bg-transparent text-green-500 border border-green-500 hover:border-green-hover hover:opacity-100 text-base py-2 px-4"
+    class="flex flex-row gap-x-4 disabled:cursor-not-allowed items-center justify-center bg-transparent text-green-500 border border-green-500 hover:bg-green-100 hover:opacity-100 text-base py-2 px-4"
     data-rac=""
     type="button"
   />
